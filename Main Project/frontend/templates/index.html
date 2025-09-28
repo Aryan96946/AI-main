@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>AI Dropout Prediction & Counseling</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="/static/css/styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <h1>AI Dropout Prediction & Counseling</h1>
+      <p id="subtitle">Help students succeed — powered by ML + human-centered counseling.</p>
+      <div id="auth">
+        <button id="show-login">Login</button>
+        <button id="show-register">Register</button>
+        <button id="logout" style="display:none">Logout</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="public">
+      <h2>Overview</h2>
+      <p>Role-based dashboards for admins, counselors and students.</p>
+    </section>
+
+    <section id="dashboard" style="display:none">
+      <h2 id="dash-title">Dashboard</h2>
+      <div id="role-area"></div>
+    </section>
+
+    <!-- modals -->
+    <div id="modal" class="modal" style="display:none">
+      <div class="modal-content">
+        <button id="close-modal" class="close">✖</button>
+        <div id="modal-body"></div>
+      </div>
+    </div>
+  </main>
+
+  <script src="/static/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+/* frontend/static/css/styles.css */
+:root{--accent:#4f46e5;--bg:#f7fafc}
+body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;line-height:1.5;background:var(--bg);color:#111;margin:0}
+.container{max-width:1000px;margin:0 auto;padding:24px}
+.hero{background:white;padding:36px 0;border-bottom:1px solid #eee}
+h1{margin:0;font-size:28px;color:var(--accent)}
+button{background:var(--accent);color:#fff;border:none;padding:8px 12px;border-radius:6px;cursor:pointer}
+button.secondary{background:#fff;color:var(--accent);border:1px solid var(--accent)}
+.modal{position:fixed;left:0;top:0;right:0;bottom:0;background:rgba(0,0,0,0.45);display:flex;align-items:center;justify-content:center}
+.modal-content{background:#fff;padding:20px;border-radius:8px;min-width:320px;max-width:720px;position:relative}
+.close{position:absolute;right:8px;top:8px;border:none;background:transparent;font-size:18px}
+.card{background:#fff;padding:16px;border-radius:8px;border:1px solid #eee;margin-bottom:12px}
+.field{display:flex;flex-direction:column;margin-bottom:8px}
+.field input, .field textarea{padding:8px;border:1px solid #ddd;border-radius:6px}
+.small{font-size:13px;color:#666}
