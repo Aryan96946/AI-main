@@ -1,0 +1,47 @@
+version: '3.8'
+services:
+  db:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: aidropout
+    ports:
+      - "3307:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin","ping","-h","localhost"]
+      interval: 10s
+      retries: 5
+
+  backend:
+    build: ./backend
+    volumes:
+      - ./backend:/app
+    environment:
+      - DATABASE_URI=mysql+pymysql://aryan:password@db:3306/aidropout
+      - FLASK_ENV=development
+      - JWT_SECRET_KEY=superjwtsecret
+      - SECRET_KEY=supersecret
+      - GMAIL_SENDER=aryannawal185@gmail.com
+      - GMAIL_APP_PASSWORD=qamt pfti jbge kelp
+    ports:
+      - "5000:5000"
+    depends_on:
+      db:
+        condition: service_healthy
+
+  frontend:
+    build: ./frontend
+    volumes:
+      - ./frontend:/app
+    ports:
+      - "3000:3000"
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+      - REACT_APP_API_URL=http://localhost:5000/api
+    depends_on:
+      - backend
+
+volumes:
+  db_data:
