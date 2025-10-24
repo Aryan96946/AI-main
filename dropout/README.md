@@ -52,80 +52,59 @@ Built with **React**, **Flask**, and **MySQL**, it supports multiple roles — S
 
 ## Project Structure
 
-AI-11
-├── backend
-│   ├── app.py
-│   ├── auth.py
-│   ├── config.py
-│   ├── create_db.py
-│   ├── Dockerfile
-│   ├── email_utils.py
-│   ├── entrypoint.sh
-│   ├── ml
-│   │   ├── explain.py
-│   │   ├── model.pkl
-│   │   ├── preprocess.py
-│   │   ├── __pycache__
-│   │   │   └── recommend.cpython-311.pyc
-│   │   ├── recommend.py
-│   │   ├── student_data.csv
-│   │   └── train_model.py
-│   ├── models.py
-│   ├── __pycache__
-│   │   ├── app.cpython-311.pyc
-│   │   ├── app.cpython-313.pyc
-│   │   ├── auth.cpython-311.pyc
-│   │   ├── config.cpython-311.pyc
-│   │   ├── email_utils.cpython-311.pyc
-│   │   └── models.cpython-311.pyc
-│   ├── requirements.txt
-│   ├── routes
-│   │   ├── admin.py
-│   │   ├── auth_routes.py
-│   │   ├── __init__.py
-│   │   ├── predict.py
-│   │   ├── __pycache__
-│   │   │   ├── admin.cpython-311.pyc
-│   │   │   ├── admin.cpython-313.pyc
-│   │   │   ├── auth_routes.cpython-311.pyc
-│   │   │   ├── auth_routes.cpython-313.pyc
-│   │   │   ├── __init__.cpython-311.pyc
-│   │   │   ├── __init__.cpython-313.pyc
-│   │   │   ├── predict.cpython-311.pyc
-│   │   │   ├── students.cpython-311.pyc
-│   │   │   ├── students.cpython-313.pyc
-│   │   │   ├── teachers.cpython-311.pyc
-│   │   │   └── teachers.cpython-313.pyc
-│   │   ├── students.py
-│   │   └── teachers.py
-│   └── update_passwords.py
-├── docker-compose.yml
-├── frontend
-│   ├── Dockerfile
-│   ├── package.json
-│   ├── package-lock.json
-│   ├── public
-│   │   └── index.html
-│   └── src
-│       ├── api
-│       │   └── auth.js
-│       ├── api.js
-│       ├── App.js
-│       ├── components
-│       │   ├── auth
-│       │   │   ├── Login.js
-│       │   │   └── Register.js
-│       │   ├── dashboards
-│       │   │   ├── AdminDashboard.js
-│       │   │   ├── StudentDashboard.js
-│       │   │   └── TeacherDashboard.js
-│       │   ├── PredictionForm.jsx
-│       │   └── shared
-│       │       ├── ProtectedRoute.js
-│       │       └── Sidebar.js
-│       └── index.js
+AI-11/
+├── backend/                 
+│   ├── app.py
+│   ├── auth.py
+│   ├── config.py
+│   ├── create_db.py
+│   ├── Dockerfile
+│   ├── email_utils.py
+│   ├── entrypoint.sh
+│   ├── ml/                 
+│   │   ├── explain.py
+│   │   ├── model.pkl
+│   │   ├── preprocess.py
+│   │   ├── recommend.py
+│   │   ├── student_data.csv
+│   │   └── train_model.py
+│   ├── models.py
+│   ├── requirements.txt
+│   ├── routes/            
+│   │   ├── admin.py
+│   │   ├── auth_routes.py
+│   │   ├── predict.py
+│   │   ├── students.py
+│   │   └── teachers.py
+│   └── update_passwords.py
+├── docker-compose.yml       
+├── frontend/              
+│   ├── Dockerfile
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── public/
+│   │   └── index.html
+│   └── src/
+│       ├── api/
+│       │   └── auth.js
+│       ├── api.js
+│       ├── App.js
+│       ├── components/
+│       │   ├── auth/
+│       │   │   ├── Login.js
+│       │   │   └── Register.js
+│       │   ├── dashboards/
+│       │   │   ├── AdminDashboard.js
+│       │   │   ├── StudentDashboard.js
+│       │   │   └── TeacherDashboard.js
+│       │   ├── PredictionForm.jsx
+│       │   └── shared/
+│       │       ├── ProtectedRoute.js
+│       │       └── Sidebar.js
+│       └── index.js
 ├── package.json
 └── README.md
+
 
 
 
@@ -204,4 +183,5 @@ flask run --host=0.0.0.0
 cd frontend
 npm install
 npm start
+
 
