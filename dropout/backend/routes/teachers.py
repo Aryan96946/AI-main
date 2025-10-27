@@ -25,17 +25,18 @@ def list_students():
         return resp, code
 
     students = Student.query.all()
-    out = []
+    output = []
     for s in students:
-        latest = s.predictions[-1].risk_score if s.predictions else None
-        out.append({
+        latest_pred = s.predictions[-1].risk_score if s.predictions else None
+        output.append({
             'id': s.id,
             'full_name': s.full_name,
             'attendance': s.attendance,
             'avg_score': s.avg_score,
-            'risk_score': latest
+            'risk_score': latest_pred
         })
-    return jsonify({'students': out}), 200
+
+    return jsonify({'students': output}), 200
 
 
 @teachers_bp.route('/<int:student_id>/counsel', methods=['POST'])
@@ -45,17 +46,25 @@ def add_counseling(student_id):
     if resp:
         return resp, code
 
-    user_id = identity['id']
-    data = request.json or {}
-    notes = str(data.get('notes', '')).strip()
+    data = request.get_json() or {}
+    notes = (data.get('notes') or '').strip()
     follow_up = data.get('follow_up_at')
 
-    cs = CounselingSession(student_id=student_id, teacher_id=user_id, notes=notes)
+    student = Student.query.get(student_id)
+    if not student:
+        return jsonify({'msg': 'Student not found'}), 404
+
+    cs = CounselingSession(
+        student_id=student.id,
+        teacher_id=identity['id'],
+        notes=notes
+    )
+
     if follow_up:
         try:
             cs.follow_up_at = parser.isoparse(follow_up)
         except Exception:
-            return jsonify({'msg': 'Invalid follow_up_at format'}), 400
+            return jsonify({'msg': 'Invalid follow_up_at format (use ISO 8601)'}), 400
 
     try:
         db.session.add(cs)
@@ -64,7 +73,28 @@ def add_counseling(student_id):
         db.session.rollback()
         return jsonify({'msg': 'Database error', 'error': str(e)}), 500
 
-    return jsonify({'msg': 'Created', 'session_id': cs.id}), 201
+    return jsonify({'msg': 'Counseling session created', 'session_id': cs.id}), 201
+
+
+@teachers_bp.route('/<int:student_id>/counsel', methods=['GET'])
+@jwt_required()
+def get_counseling(student_id):
+    identity, resp, code = teacher_or_admin_required()
+    if resp:
+        return resp, code
+
+    sessions = CounselingSession.query.filter_by(student_id=student_id).all()
+    output = []
+    for s in sessions:
+        output.append({
+            'id': s.id,
+            'notes': s.notes,
+            'teacher_id': s.teacher_id,
+            'created_at': s.created_at.isoformat(),
+            'follow_up_at': s.follow_up_at.isoformat() if s.follow_up_at else None
+        })
+
+    return jsonify({'sessions': output}), 200
 
 
 @teachers_bp.route('/batch_predict', methods=['POST'])
@@ -76,9 +106,10 @@ def batch_predict():
 
     students = Student.query.all()
     created = 0
+
     for s in students:
         score = 1 - (s.attendance / 100) * 0.6 - (s.avg_score / 100) * 0.4 + random.uniform(-0.1, 0.1)
-        score = max(0.0, min(1.0, score))
+        score = max(0.0, min(1.0, score))  # Clamp between 0–1
         pred = Prediction(student_id=s.id, risk_score=score)
         db.session.add(pred)
         created += 1
@@ -89,4 +120,4 @@ def batch_predict():
         db.session.rollback()
         return jsonify({'msg': 'Database error', 'error': str(e)}), 500
 
-    return jsonify({'created': created}), 201
+    return jsonify({'msg': f'{created} predictions created'}), 201
