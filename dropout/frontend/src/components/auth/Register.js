@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import API from "../../api";
+import { motion, AnimatePresence } from "framer-motion"; // ✨ animations
 
 export default function Register() {
   const [formData, setFormData] = useState({
@@ -23,13 +24,12 @@ export default function Register() {
   const nav = useNavigate();
 
   const handleChange = (e) => {
-    setMsg(""); // Clear previous message
+    setMsg("");
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const registerUser = async (e) => {
     e.preventDefault();
-
     const { username, email, password } = formData;
 
     if (!username) return setMsg("Username is required");
@@ -80,8 +80,22 @@ export default function Register() {
     }
   };
 
+  // ✨ animation variants
+  const fadeIn = {
+    initial: { opacity: 0, y: 30 },
+    animate: { opacity: 1, y: 0 },
+    exit: { opacity: 0, y: -30 },
+    transition: { duration: 0.6 },
+  };
+
+  const buttonHover = { scale: 1.05 };
+  const buttonTap = { scale: 0.95 };
+
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
       style={{
         maxWidth: 400,
         margin: "auto",
@@ -91,133 +105,158 @@ export default function Register() {
         flexDirection: "column",
         justifyContent: "center",
         paddingTop: 60,
-        backgroundColor: "#f3f4f6", // gray-100 equivalent
+        backgroundColor: "#f3f4f6",
       }}
     >
-      <div className="bg-white shadow-2xl rounded-2xl w-full p-10">
-        <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">
-          Register
-        </h2>
+      <motion.div
+        className="bg-white shadow-2xl rounded-2xl w-full p-10"
+        initial={{ scale: 0.9, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ duration: 0.6 }}
+      >
+        <motion.h2
+          className="text-3xl font-bold text-center text-gray-800 mb-8"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          Register ✨
+        </motion.h2>
 
-        {step === 1 ? (
-          <form className="space-y-6" onSubmit={registerUser}>
-            {/* Username */}
-            <div>
-              <label
-                htmlFor="username"
-                className="block text-gray-700 font-semibold mb-2"
-              >
-                Enter Username :
-              </label>
-              <input
-                id="username"
-                type="text"
-                name="username"
-                autoComplete="username"
-                value={formData.username}
-                onChange={handleChange}
-                placeholder="Enter username"
-                className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
-              />
-            </div>
-            <br></br>
+        <AnimatePresence mode="wait">
+          {step === 1 ? (
+            <motion.form
+              key="step1"
+              className="space-y-6"
+              onSubmit={registerUser}
+              {...fadeIn}
+            >
+              {/* Username */}
+              <div>
+                <label
+                  htmlFor="username"
+                  className="block text-gray-700 font-semibold mb-2"
+                >
+                  Enter Username :
+                </label>
+                <motion.input
+                  whileFocus={{ scale: 1.02 }}
+                  id="username"
+                  type="text"
+                  name="username"
+                  autoComplete="username"
+                  value={formData.username}
+                  onChange={handleChange}
+                  placeholder="Enter username"
+                  className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
+                />
+              </div>
+              <br>
+</br>
+              {/* Full Name */}
+              <div>
+                <label
+                  htmlFor="full_name"
+                  className="block text-gray-700 font-semibold mb-2"
+                >
+                  Enter Full Name :
+                </label>
+                <motion.input
+                  whileFocus={{ scale: 1.02 }}
+                  id="full_name"
+                  type="text"
+                  name="full_name"
+                  value={formData.full_name}
+                  onChange={handleChange}
+                  placeholder="Enter full name"
+                  className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
+                />
+              </div>
+              <br>
+</br>
 
-            {/* Full Name */}
-            <div>
-              <label
-                htmlFor="full_name"
-                className="block text-gray-700 font-semibold mb-2"
-              >
-                Enter Full Name :
-              </label>
-              <input
-                id="full_name"
-                type="text"
-                name="full_name"
-                value={formData.full_name}
-                onChange={handleChange}
-                placeholder="Enter full name"
-                className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
-              />
-            </div>
-            <br></br>
+              {/* Email */}
+              <div>
+                <label
+                  htmlFor="email"
+                  className="block text-gray-700 font-semibold mb-2"
+                >
+                  Enter Gmail :
+                </label>
+                <motion.input
+                  whileFocus={{ scale: 1.02 }}
+                  id="email"
+                  type="email"
+                  name="email"
+                  autoComplete="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  placeholder="Enter Gmail address"
+                  className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
+                />
+              </div>
+              <br>
+</br>
 
-            {/* Email */}
-            <div>
-              <label
-                htmlFor="email"
-                className="block text-gray-700 font-semibold mb-2"
-              >
-                Enter Gmail :
-              </label>
-              <input
-                id="email"
-                type="email"
-                name="email"
-                autoComplete="email"
-                value={formData.email}
-                onChange={handleChange}
-                placeholder="Enter Gmail address"
-                className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
-              />
-            </div>
-            <br></br>
+              {/* Password */}
+              <div>
+                <label
+                  htmlFor="password"
+                  className="block text-gray-700 font-semibold mb-2"
+                >
+                  Enter Password :
+                </label>
+                <motion.input
+                  whileFocus={{ scale: 1.02 }}
+                  id="password"
+                  type="password"
+                  name="password"
+                  autoComplete="new-password"
+                  value={formData.password}
+                  onChange={handleChange}
+                  placeholder="Enter password"
+                  className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
+                />
+              </div>
+              <br>
+</br>
 
-            {/* Password */}
-            <div>
-              <label
-                htmlFor="password"
-                className="block text-gray-700 font-semibold mb-2"
-              >
-                Enter Password :
-              </label>
-              <input
-                id="password"
-                type="password"
-                name="password"
-                autoComplete="new-password"
-                value={formData.password}
-                onChange={handleChange}
-                placeholder="Enter password"
-                className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
-              />
-            </div>
-            <br></br>
+              {/* Role */}
+              <div>
+                <label
+                  htmlFor="role"
+                  className="block text-gray-700 font-semibold mb-2"
+                >
+                  Select Role :
+                </label>
+                <motion.select
+                  whileFocus={{ scale: 1.02 }}
+                  id="role"
+                  value={role}
+                  onChange={(e) => {
+                    setMsg("");
+                    setRole(e.target.value);
+                  }}
+                  className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
+                >
+                  <option value="student">Student</option>
+                  <option value="teacher">Teacher</option>
+                </motion.select>
+              </div>
+             <br>
+</br>
 
-            {/* Role */}
-            <div>
-              <label
-                htmlFor="role"
-                className="block text-gray-700 font-semibold mb-2"
-              >
-                Select Role :
-              </label>
-              <select
-                id="role"
-                value={role}
-                onChange={(e) => {
-                  setMsg("");
-                  setRole(e.target.value);
-                }}
-                className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
-              >
-                <option value="student">Student</option>
-                <option value="teacher">Teacher</option>
-              </select>
-            </div>
-            <br></br>
-
-            {/* Student Fields */}
-            {role === "student" && (
-              <>
-                <div>
+              {/* Student Fields */}
+              {role === "student" && (
+                <motion.div {...fadeIn}>
                   <label
                     htmlFor="roll_no"
                     className="block text-gray-700 font-semibold mb-2"
                   >
                     Roll Number :
                   </label>
-                  <input
+                  <motion.input
+                    whileFocus={{ scale: 1.02 }}
                     id="roll_no"
                     name="roll_no"
                     value={formData.roll_no}
@@ -225,17 +264,16 @@ export default function Register() {
                     placeholder="Enter roll number"
                     className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
                   />
-                </div>
-            <br></br>
-
-                <div>
+                 <br>
+</br><br></br>
                   <label
                     htmlFor="department"
-                    className="block text-gray-700 font-semibold mb-2">
-                  
-                    Department : 
+                    className="block text-gray-700 font-semibold mb-2"
+                  >
+                    Department :
                   </label>
-                  <input
+                  <motion.input
+                    whileFocus={{ scale: 1.02 }}
                     id="department"
                     name="department"
                     value={formData.department}
@@ -243,17 +281,15 @@ export default function Register() {
                     placeholder="Enter department"
                     className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
                   />
-                </div>
-            <br></br>
-
-                <div>
+                  <br></br><br></br>
                   <label
                     htmlFor="year"
                     className="block text-gray-700 font-semibold mb-2"
                   >
                     Year :
                   </label>
-                  <input
+                  <motion.input
+                    whileFocus={{ scale: 1.02 }}
                     id="year"
                     name="year"
                     value={formData.year}
@@ -261,22 +297,20 @@ export default function Register() {
                     placeholder="Enter year"
                     className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
                   />
-                </div>
-              </>
-            )}
-            <br></br>
+                </motion.div>
+              )}
 
-            {/* Teacher Fields */}
-            {role === "teacher" && (
-              <>
-                <div>
+              {/* Teacher Fields */}
+              {role === "teacher" && (
+                <motion.div {...fadeIn}>
                   <label
                     htmlFor="employee_id"
                     className="block text-gray-700 font-semibold mb-2"
                   >
                     Employee ID :
                   </label>
-                  <input
+                  <motion.input
+                    whileFocus={{ scale: 1.02 }}
                     id="employee_id"
                     name="employee_id"
                     value={formData.employee_id}
@@ -284,16 +318,16 @@ export default function Register() {
                     placeholder="Enter employee ID"
                     className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
                   />
-                </div>
-             <br></br>
-                <div>
+                 <br></br><br></br>
+
                   <label
                     htmlFor="subject"
                     className="block text-gray-700 font-semibold mb-2"
                   >
                     Subject Specialization :
                   </label>
-                  <input
+                  <motion.input
+                    whileFocus={{ scale: 1.02 }}
                     id="subject"
                     name="subject"
                     value={formData.subject}
@@ -301,69 +335,81 @@ export default function Register() {
                     placeholder="Enter subject specialization"
                     className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
                   />
-                </div>
-              </>
-            )}
-            <br></br>
+                </motion.div>
+              )}
+             <br>
+</br>
 
-            {/* Send OTP Button */}
-            <button
-              type="submit"
-              disabled={loading}
-              className={`w-full font-semibold py-3 rounded-lg transition duration-200 ${
-                loading
-                  ? "bg-blue-400 cursor-not-allowed"
-                  : "bg-blue-600 hover:bg-blue-700 text-white"
-              }`}
+              {/* Send OTP Button */}
+              <motion.button
+                type="submit"
+                whileHover={buttonHover}
+                whileTap={buttonTap}
+                disabled={loading}
+                className={`w-full font-semibold py-3 rounded-lg transition duration-200 ${
+                  loading
+                    ? "bg-blue-400 cursor-not-allowed"
+                    : "bg-blue-600 hover:bg-blue-700 text-white"
+                }`}
+              >
+                {loading ? "Sending OTP..." : "Send OTP"}
+              </motion.button>
+            </motion.form>
+          ) : (
+            <motion.div
+              key="otp-step"
+              className="space-y-6"
+              {...fadeIn}
             >
-              {loading ? "Sending OTP..." : "Send OTP"}
-            </button>
-          </form>
-        ) : (
-          <div className="space-y-6">
-            <label
-              htmlFor="otp"
-              className="block text-gray-700 font-semibold mb-2"
-            >
-              Enter OTP :
-            </label>
-            <input
-              id="otp"
-              type="text"
-              placeholder="Enter OTP"
-              value={otp}
-              onChange={(e) => {
-                setMsg("");
-                setOtp(e.target.value);
-              }}
-              className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-green-500 outline-none"
-            />
-            <button
-              onClick={verifyUser}
-              disabled={loading}
-              className={`w-full font-semibold py-3 rounded-lg transition duration-200 ${
-                loading
-                  ? "bg-green-400 cursor-not-allowed"
-                  : "bg-green-600 hover:bg-green-700 text-white"
-              }`}
-            >
-              {loading ? "Verifying..." : "Verify & Register"}
-            </button>
-          </div>
-        )}
+              <label
+                htmlFor="otp"
+                className="block text-gray-700 font-semibold mb-2"
+              >
+                Enter OTP :
+              </label>
+              <motion.input
+                whileFocus={{ scale: 1.02 }}
+                id="otp"
+                type="text"
+                placeholder="Enter OTP"
+                value={otp}
+                onChange={(e) => {
+                  setMsg("");
+                  setOtp(e.target.value);
+                }}
+                className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-green-500 outline-none"
+              />
+              <motion.button
+                whileHover={buttonHover}
+                whileTap={buttonTap}
+                onClick={verifyUser}
+                disabled={loading}
+                className={`w-full font-semibold py-3 rounded-lg transition duration-200 ${
+                  loading
+                    ? "bg-green-400 cursor-not-allowed"
+                    : "bg-green-600 hover:bg-green-700 text-white"
+                }`}
+              >
+                {loading ? "Verifying..." : "Verify & Register"}
+              </motion.button>
+            </motion.div>
+          )}
+        </AnimatePresence>
 
         {msg && (
-          <p
+          <motion.p
             className={`mt-6 text-center font-medium ${
               msg.toLowerCase().includes("success")
                 ? "text-green-600"
                 : "text-red-500"
             }`}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
           >
             {msg}
-          </p>
+          </motion.p>
         )}
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 }
