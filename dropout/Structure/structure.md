@@ -21,7 +21,7 @@ AI-11/
 │   │   ├── auth_routes.py
 │   │   ├── predict.py
 │   │   ├── students.py
-│   │   └── teachers.py
+│   │   ├── teachers.py
 |   |   └──counseling.py
 │   └── update_passwords.py
 ├── docker-compose.yml      
