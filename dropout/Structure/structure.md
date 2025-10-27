@@ -22,6 +22,7 @@ AI-11/
 │   │   ├── predict.py
 │   │   ├── students.py
 │   │   └── teachers.py
+|   |   └──counseling.py
 │   └── update_passwords.py
 ├── docker-compose.yml      
 ├── frontend/               
@@ -48,5 +49,6 @@ AI-11/
 │       │       ├── ProtectedRoute.js
 │       │       └── Sidebar.js
 │       └── index.js
+├── .env
 ├── package.json
 └── README.md
