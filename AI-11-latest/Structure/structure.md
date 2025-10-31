@@ -15,6 +15,7 @@ AI-11/
 │   │   ├── student_data.csv
 │   │   └── train_model.py
 │   ├── models.py
+│   ├── migrations
 │   ├── requirements.txt
 │   ├── routes/           
 │   │   ├── admin.py
@@ -38,16 +39,16 @@ AI-11/
 │       ├── App.js
 │       ├── components/
 │       │   ├── auth/
-│       │   │   ├── Login.js
-│       │   │   └── Register.js
+│       │   │   ├── Login.jsx
+│       │   │   └── Register.jsx
 │       │   ├── dashboards/
-│       │   │   ├── AdminDashboard.js
-│       │   │   ├── StudentDashboard.js
-│       │   │   └── TeacherDashboard.js
+│       │   │   ├── AdminDashboard.jsx
+│       │   │   ├── StudentDashboard.jsx
+│       │   │   └── TeacherDashboard.jsx
 │       │   ├── PredictionForm.jsx
 │       │   └── shared/
-│       │       ├── ProtectedRoute.js
-│       │       └── Sidebar.js
+│       │       └── ProtectedRoute.jsx
+|       ├──Home.jsx
 │       └── index.js
 ├── .env
 ├── package.json
