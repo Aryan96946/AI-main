@@ -1,0 +1,4 @@
+- [ ] Modify backend/routes/ml_routes.py to return full prediction response including probability, risk_tier, suggestions, and explanation
+- [ ] Add imports for explain_prediction and get_recommendation
+- [ ] Update predict function to compute probabilities, risk tier, suggestions, and SHAP explanations
+- [ ] Test the changes to ensure frontend receives expected data
