@@ -1,0 +1,16 @@
+t=2026-03-09T14:30:28+0530 lvl=info msg="no configuration paths supplied"
+t=2026-03-09T14:30:28+0530 lvl=warn msg="ngrok config file found at both XDG and legacy locations, using XDG location" xdg_path=/home/aryan/.config/ngrok/ngrok.yml legacy_path=/home/aryan/.ngrok2/ngrok.yml
+t=2026-03-09T14:30:28+0530 lvl=info msg="using configuration at default config path" path=/home/aryan/.config/ngrok/ngrok.yml
+t=2026-03-09T14:30:28+0530 lvl=info msg="open config file" path=/home/aryan/.config/ngrok/ngrok.yml err=nil
+t=2026-03-09T14:30:28+0530 lvl=info msg="FIPS 140 mode" enabled=false
+t=2026-03-09T14:30:28+0530 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040 allow_hosts=[]
+t=2026-03-09T14:30:29+0530 lvl=info msg="client session established" obj=tunnels.session
+t=2026-03-09T14:30:29+0530 lvl=info msg="tunnel session started" obj=tunnels.session
+t=2026-03-09T14:30:29+0530 lvl=info msg="started tunnel" obj=tunnels name=command_line addr=http://localhost:5000 url=https://5c13-2401-4900-8818-5800-3ed-9184-c3d3-5726.ngrok-free.app
+t=2026-03-09T14:31:40+0530 lvl=info msg="received stop request" obj=app stopReq="{err:<nil> restart:false}"
+t=2026-03-09T14:31:40+0530 lvl=info msg="session closing" obj=tunnels.session err=nil
+t=2026-03-10T12:30:00+0530 lvl=info msg="no configuration paths supplied"
+t=2026-03-10T12:30:00+0530 lvl=warn msg="ngrok config file found at both XDG and legacy locations, using XDG location" xdg_path=/home/aryan/.config/ngrok/ngrok.yml legacy_path=/home/aryan/.ngrok2/ngrok.yml
+t=2026-03-10T12:30:00+0530 lvl=info msg="using configuration at default config path" path=/home/aryan/.config/ngrok/ngrok.yml
+t=2026-03-10T12:30:00+0530 lvl=info msg="open config file" path=/home/aryan/.config/ngrok/ngrok.yml err=nil
+t=2026-03-10T12:30:00+0530 lvl=info msg="FIPS 140 mode" enabled=false

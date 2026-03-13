@@ -1,0 +1,30 @@
+t=2026-03-09T14:30:35+0530 lvl=info msg="no configuration paths supplied"
+t=2026-03-09T14:30:35+0530 lvl=warn msg="ngrok config file found at both XDG and legacy locations, using XDG location" xdg_path=/home/aryan/.config/ngrok/ngrok.yml legacy_path=/home/aryan/.ngrok2/ngrok.yml
+t=2026-03-09T14:30:35+0530 lvl=info msg="using configuration at default config path" path=/home/aryan/.config/ngrok/ngrok.yml
+t=2026-03-09T14:30:35+0530 lvl=info msg="open config file" path=/home/aryan/.config/ngrok/ngrok.yml err=nil
+t=2026-03-09T14:30:35+0530 lvl=info msg="FIPS 140 mode" enabled=false
+t=2026-03-09T14:30:35+0530 lvl=warn msg="can't bind default web address, trying alternatives" obj=web addr=127.0.0.1:4040
+t=2026-03-09T14:30:35+0530 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4041 allow_hosts=[]
+t=2026-03-09T14:30:36+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="authentication failed: Your account is limited to 1 simultaneous ngrok agent sessions.\nRun multiple endpoints at the same time from a single agent by defining them in your agent configuration file and running `ngrok start --all`.\nRead more about the agent configuration file: https://ngrok.com/docs/agent/config/ \nYou can view your current agent sessions in the dashboard: https://dashboard.ngrok.com/agents. Upgrade to a paid plan to remove this limit:\nhttps://dashboard.ngrok.com/billing/choose-a-plan\r\n\r\nERR_NGROK_108\r\n"
+t=2026-03-09T14:30:36+0530 lvl=eror msg="session closing" obj=tunnels.session err="authentication failed: Your account is limited to 1 simultaneous ngrok agent sessions.\nRun multiple endpoints at the same time from a single agent by defining them in your agent configuration file and running `ngrok start --all`.\nRead more about the agent configuration file: https://ngrok.com/docs/agent/config/ \nYou can view your current agent sessions in the dashboard: https://dashboard.ngrok.com/agents. Upgrade to a paid plan to remove this limit:\nhttps://dashboard.ngrok.com/billing/choose-a-plan\r\n\r\nERR_NGROK_108\r\n"
+t=2026-03-09T14:30:36+0530 lvl=info msg="received stop request" obj=app stopReq="{err:{Remote:true Inner:{Inner:0xc00069ef80}} restart:false}"
+t=2026-03-09T14:30:36+0530 lvl=eror msg="terminating with error" obj=app err="authentication failed: Your account is limited to 1 simultaneous ngrok agent sessions.\nRun multiple endpoints at the same time from a single agent by defining them in your agent configuration file and running `ngrok start --all`.\nRead more about the agent configuration file: https://ngrok.com/docs/agent/config/ \nYou can view your current agent sessions in the dashboard: https://dashboard.ngrok.com/agents. Upgrade to a paid plan to remove this limit:\nhttps://dashboard.ngrok.com/billing/choose-a-plan\r\n\r\nERR_NGROK_108\r\n"
+t=2026-03-09T14:30:36+0530 lvl=crit msg="command failed" err="authentication failed: Your account is limited to 1 simultaneous ngrok agent sessions.\nRun multiple endpoints at the same time from a single agent by defining them in your agent configuration file and running `ngrok start --all`.\nRead more about the agent configuration file: https://ngrok.com/docs/agent/config/ \nYou can view your current agent sessions in the dashboard: https://dashboard.ngrok.com/agents. Upgrade to a paid plan to remove this limit:\nhttps://dashboard.ngrok.com/billing/choose-a-plan\r\n\r\nERR_NGROK_108\r\n"
+t=2026-03-10T12:29:19+0530 lvl=info msg="no configuration paths supplied"
+t=2026-03-10T12:29:19+0530 lvl=warn msg="ngrok config file found at both XDG and legacy locations, using XDG location" xdg_path=/home/aryan/.config/ngrok/ngrok.yml legacy_path=/home/aryan/.ngrok2/ngrok.yml
+t=2026-03-10T12:29:19+0530 lvl=info msg="using configuration at default config path" path=/home/aryan/.config/ngrok/ngrok.yml
+t=2026-03-10T12:29:19+0530 lvl=info msg="open config file" path=/home/aryan/.config/ngrok/ngrok.yml err=nil
+t=2026-03-10T12:29:19+0530 lvl=info msg="FIPS 140 mode" enabled=false
+t=2026-03-10T12:29:19+0530 lvl=warn msg="can't bind default web address, trying alternatives" obj=web addr=127.0.0.1:4040
+t=2026-03-10T12:29:19+0530 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4041 allow_hosts=[]
+t=2026-03-10T12:29:20+0530 lvl=info msg="client session established" obj=tunnels.session
+t=2026-03-10T12:29:20+0530 lvl=info msg="tunnel session started" obj=tunnels.session
+t=2026-03-10T12:29:21+0530 lvl=info msg="started tunnel" obj=tunnels name=command_line addr=http://localhost:3000 url=https://d0de-2401-4900-8818-5800-82d4-7f-936d-21f3.ngrok-free.app
+t=2026-03-10T12:29:25+0530 lvl=info msg=start pg=/api/tunnels id=81cc36ad2819e6b0
+t=2026-03-10T12:29:25+0530 lvl=info msg=end pg=/api/tunnels id=81cc36ad2819e6b0 status=200 dur=205.259µs
+t=2026-03-10T12:30:03+0530 lvl=info msg="no configuration paths supplied"
+t=2026-03-10T12:30:03+0530 lvl=warn msg="ngrok config file found at both XDG and legacy locations, using XDG location" xdg_path=/home/aryan/.config/ngrok/ngrok.yml legacy_path=/home/aryan/.ngrok2/ngrok.yml
+t=2026-03-10T12:30:03+0530 lvl=info msg="using configuration at default config path" path=/home/aryan/.config/ngrok/ngrok.yml
+t=2026-03-10T12:30:03+0530 lvl=info msg="open config file" path=/home/aryan/.config/ngrok/ngrok.yml err=nil
+t=2026-03-10T12:30:03+0530 lvl=info msg="FIPS 140 mode" enabled=false
+t=2026-03-10T12:30:03+0530 lvl=warn msg="can't bind default web address, trying alternatives" obj=web addr=127.0.0.1:4040
