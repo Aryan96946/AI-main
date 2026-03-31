@@ -1,0 +1,26 @@
+id,student_id,user_id,full_name,attendance,avg_score,assignments_completed,behavior_score,grade,additional_info,marital_status,application_mode,course,cu1_enrolled,cu1_approved,cu1_grade,cu2_enrolled,cu2_approved,cu2_grade,gender,age_at_enrollment,scholarship_holder,debtor,tuition_fees_up_to_date,academic_score,Target
+5,STU001,12,ss,100,75,5,8,B,Consistent performance,Single,Regular,Computer Science,1,1,15,1,1,14,male,18,0,0,1,85,Graduate
+7,STU002,15,Tanishq Sharma,96.8743,82,6,9,A,Excellent coder,Single,Regular,Computer Science,1,1,16,1,1,16.5,Male,19,0,0,1,90,Graduate
+8,STU003,16,Rajat,10,40,1,3,D,Good analytical skills,Single,Regular,Information Technology,1,0,14.5,1,0,15,Male,20,0,1,0,45,Dropout
+9,STU004,17,dhirendra,5,35,0,2,F,Needs improvement,Married,Distance,Mechanical Engineering,1,0,10,1,0,9,Male,21,0,1,0,40,Dropout
+10,STU005,18,raunak,63,58,3,5,C,Average performance,Single,Regular,Civil Engineering,1,1,9,1,0,8.5,Male,19,0,0,1,62,Enrolled
+11,STU006,19,ramlakhan,99.0787,74,5,8,B,Hardworking,Married,Regular,Electronics,1,1,14,1,1,14.5,Male,22,0,0,1,82,Graduate
+12,STU007,20,ramlakhan,81.6461,78,6,9,A,Excellent participation,Single,Regular,Computer Science,1,1,15.5,1,1,16,Male,20,0,0,1,88,Graduate
+13,STU008,21,Gaurav tulsyani,90.9944,85,7,10,A,Top performer,Single,Regular,Computer Science,1,1,17.5,1,1,18,Male,18,0,0,1,95,Graduate
+14,STU009,22,darshanpal singh,55,60,3,6,C,Good in teamwork,Married,Regular,Information Technology,1,1,14,1,0,14.5,Male,23,0,0,1,65,Enrolled
+15,STU010,23,Saumya yadav,97.1851,88,8,9,A,Excellent communication,Single,Regular,Computer Science,1,1,18,1,1,18.5,Female,19,0,0,1,92,Graduate
+16,STU011,24,Anjali Sharma,95.8247,90,9,10,A+,Outstanding performance,Single,Regular,Computer Science,1,1,19.5,1,1,20,Female,18,0,0,1,97,Graduate
+17,STU012,25,Gaurav Saini,12,38,1,3,D,Can improve,Single,Distance,Mechanical Engineering,1,0,9.5,1,0,9,Male,21,0,1,0,50,Dropout
+18,STU013,26,musraf khan,69,62,4,6,B,Good dedication,Married,Regular,Civil Engineering,1,1,15,1,1,15.5,Male,20,0,0,1,70,Enrolled
+19,STU014,27,Arvind singh Rathore,89.1269,73,5,7,B,Improving steadily,Married,Regular,Electronics,1,1,14.2,1,1,14.5,Male,22,0,0,1,81,Graduate
+20,STU015,28,Ankur Choudhary,94.536,79,6,8,A,Strong fundamentals,Single,Regular,Information Technology,1,1,16,1,1,16.5,Male,20,0,0,1,89,Graduate
+21,STU016,29,Arpit Khichar,85.2991,83,7,9,A,Great leadership,Single,Regular,Computer Science,1,1,17,1,1,17.5,Male,19,0,0,1,93,Graduate
+22,STU017,30,John Doe,20,25,0,1,F,Poor performance,Married,Distance,Mechanical Engineering,1,0,8,1,0,7,Male,25,0,1,0,30,Dropout
+23,STU018,31,Jane Smith,15,20,0,2,F,Struggling,Single,Regular,Civil Engineering,1,0,6,1,0,5,Female,24,0,1,0,25,Dropout
+24,STU019,32,Bob Johnson,10,15,0,1,F,Needs help,Married,Distance,Electronics,1,0,5,1,0,4,Male,26,0,1,0,20,Dropout
+25,STU020,33,Alice Brown,5,10,0,1,F,Very low,Single,Regular,Information Technology,1,0,4,1,0,3,Female,27,0,1,0,15,Dropout
+26,STU021,34,Charlie Wilson,30,30,1,2,F,Below average,Married,Distance,Computer Science,1,0,9,1,0,8,Male,28,0,1,0,35,Dropout
+27,STU022,35,Eve Davis,25,22,0,2,F,Not performing,Single,Regular,Mechanical Engineering,1,0,7,1,0,6,Female,29,0,1,0,28,Dropout
+28,STU023,36,Frank Miller,18,18,0,1,F,Needs intervention,Married,Distance,Civil Engineering,1,0,6,1,0,5,Male,30,0,1,0,22,Dropout
+29,STU024,37,Grace Lee,12,12,0,1,F,Struggling badly,Single,Regular,Electronics,1,0,5,1,0,4,Female,31,0,1,0,18,Dropout
+30,STU025,38,Henry Taylor,8,8,0,1,F,Very poor,Married,Distance,Information Technology,1,0,4,1,0,3,Male,32,0,1,0,12,Dropout

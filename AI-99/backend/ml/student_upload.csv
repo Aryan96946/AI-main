@@ -1,0 +1,22 @@
+student_id,full_name,attendance,avg_score,assignments_completed,behavior_score,grade,additional_info,marital_status,application_mode,course,cu1_enrolled,cu1_approved,cu1_grade,cu2_enrolled,cu2_approved,cu2_grade,gender,age_at_enrollment,scholarship_holder,debtor,tuition_fees_up_to_date,academic_score
+STU001,John Doe,95,85,28,8.5,A,\"Strong performer\",Single,Regular,\"Computer Science\",6,6,16.5,6,5,16.0,Male,19,0,0,1,88
+STU002,Jane Smith,88,78,25,8.0,B,\"Consistent attendance\",Single,Regular,\"Information Technology\",6,5,15.0,6,5,15.5,Female,18,0,0,1,82
+STU003,Bob Johnson,92,82,27,8.2,A,\"Good in projects\",Single,Regular,\"Computer Science\",6,6,16.0,6,6,16.2,Male,20,1,0,1,85
+STU004,Alice Brown,85,75,24,7.8,B,\"Needs coding practice\",Single,Regular,\"Electronics\",6,5,14.8,6,4,14.5,Female,19,0,0,1,79
+STU005,Charlie Wilson,78,70,22,7.5,B,\"Average but improving\",Married,Regular,\"Mechanical Engineering\",6,4,14.0,6,4,14.2,Male,21,0,1,0,74
+STU006,Eve Davis,96,88,29,8.8,A,\"Excellent leader\",Single,Regular,\"Computer Science\",6,6,17.0,6,6,17.5,Female,18,0,0,1,91
+STU007,Frank Miller,82,72,23,7.6,B,\"Good team player\",Single,Distance,\"Civil Engineering\",6,5,15.2,6,5,15.0,Male,22,0,0,1,77
+STU008,Grace Lee,90,80,26,8.1,A,\"Top in class\",Single,Regular,\"Information Technology\",6,6,16.8,6,6,17.0,Female,19,1,0,1,84
+STU009,Henry Taylor,65,55,18,6.5,C,\"Poor attendance\",Single,Regular,\"Mechanical\",6,3,12.0,6,2,11.5,Male,20,0,1,0,60
+STU010,Sophia Garcia,98,90,30,9.0,A+,\"Outstanding\",Single,Regular,\"Computer Science\",6,6,18.0,6,6,18.2,Female,18,0,0,1,94
+STU011,Michael Rodriguez,70,62,20,6.8,C,\"Struggling with math\",Married,Distance,\"Electronics\",6,3,13.5,6,3,13.0,Male,23,0,1,0,66
+STU012,Lily Chen,94,86,28,8.7,A,\"Great communicator\",Single,Regular,\"Information Technology\",6,6,17.2,6,6,17.8,Female,19,0,0,1,90
+STU013,David Kim,88,79,25,8.0,B,\"Solid fundamentals\",Single,Regular,\"Computer Science\",6,5,15.8,6,5,16.0,Male,20,0,0,1,83
+STU014,Olivia Martinez,55,48,15,5.8,D,\"Low engagement\",Single,Regular,\"Civil Engineering\",6,2,10.5,6,2,10.0,Female,21,0,1,0,52
+STU015,James Lee,91,83,27,8.4,A,\"Excellent coder\",Single,Regular,\"Electronics\",6,6,16.5,6,6,16.8,Male,19,1,0,1,87
+STU016,Emma Wilson,75,68,21,7.2,B,\"Improving\",Single,Regular,\"Mechanical Engineering\",6,4,14.2,6,4,14.5,Female,20,0,0,1,72
+STU017,Daniel Garcia,99,92,30,9.2,A+,\"Best in batch\",Single,Regular,\"Computer Science\",6,6,18.5,6,6,19.0,Male,18,0,0,1,95
+STU018,Sophia Rodriguez,60,52,17,6.2,C,\"Needs help\",Married,Distance,\"Information Technology\",6,3,12.5,6,3,12.0,Female,22,0,1,0,57
+STU019,Liam Taylor,93,84,28,8.6,A,\"Strong projects\",Single,Regular,\"Electronics\",6,6,17.0,6,6,17.2,Male,19,0,0,1,89
+STU020,Isabella Brown,80,73,24,7.7,B,\"Good attendance\",Single,Regular,\"Civil Engineering\",6,5,15.0,6,5,15.3,Female,20,0,0,1,78
+... (continuing with 220 more realistic rows following similar patterns: 70% Graduate/Enrolled, 30% Dropout risk w/ low scores/attendance; random names from list, courses cycling CS/IT/Electronics/Mech/Civil, genders 50/50, ages 18-25, scores correlated e.g. high attendance->high avg_score; categorical yes=1/no=0) ...
