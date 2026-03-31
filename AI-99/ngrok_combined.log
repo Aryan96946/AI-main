@@ -1,0 +1,38 @@
+t=2026-03-09T14:33:00+0530 lvl=info msg="no configuration paths supplied"
+t=2026-03-09T14:33:00+0530 lvl=warn msg="ngrok config file found at both XDG and legacy locations, using XDG location" xdg_path=/home/aryan/.config/ngrok/ngrok.yml legacy_path=/home/aryan/.ngrok2/ngrok.yml
+t=2026-03-09T14:33:00+0530 lvl=info msg="using configuration at default config path" path=/home/aryan/.config/ngrok/ngrok.yml
+t=2026-03-09T14:33:00+0530 lvl=info msg="open config file" path=/home/aryan/.config/ngrok/ngrok.yml err=nil
+t=2026-03-09T14:33:00+0530 lvl=info msg="FIPS 140 mode" enabled=false
+t=2026-03-09T14:33:00+0530 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040 allow_hosts=[]
+t=2026-03-09T14:33:01+0530 lvl=info msg="client session established" obj=tunnels.session
+t=2026-03-09T14:33:01+0530 lvl=info msg="tunnel session started" obj=tunnels.session
+t=2026-03-09T14:33:02+0530 lvl=info msg="started tunnel" obj=tunnels name=frontend addr=http://localhost:3000 url=https://cfe0-2401-4900-8818-5800-3ed-9184-c3d3-5726.ngrok-free.app
+t=2026-03-09T14:33:02+0530 lvl=info msg="started tunnel" obj=tunnels name=backend addr=http://localhost:5000 url=https://c771-2401-4900-8818-5800-3ed-9184-c3d3-5726.ngrok-free.app
+t=2026-03-09T14:33:55+0530 lvl=info msg="join connections" obj=join id=819fbebb99e4 l=[::1]:5000 r=[2401:4900:8818:5800:3ed:9184:c3d3:5726]:41218
+t=2026-03-09T14:36:22+0530 lvl=eror msg="heartbeat timeout, terminating session" obj=tunnels.session obj=csess id=3fd598c3174d clientid=bbdc0972c25796fb77334d256952a74d
+t=2026-03-09T14:36:45+0530 lvl=eror msg="session closed, starting reconnect loop" obj=tunnels.session obj=csess id=29d84f980140 err="session closed"
+t=2026-03-09T14:37:00+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: i/o timeout"
+t=2026-03-09T14:38:17+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: i/o timeout"
+t=2026-03-09T14:42:19+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: i/o timeout"
+t=2026-03-09T14:42:56+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp [2600:1f16:d83:1200:6d30:5f74:cb2a:101]:443: i/o timeout"
+t=2026-03-09T14:43:33+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to send authentication request: session closed"
+t=2026-03-09T14:43:58+0530 lvl=info msg="client session established" obj=tunnels.session
+t=2026-03-09T14:43:58+0530 lvl=info msg="tunnel session started" obj=tunnels.session
+t=2026-03-09T14:45:03+0530 lvl=eror msg="session closed, starting reconnect loop" obj=tunnels.session obj=csess id=29d84f980140 err="read EOF from remote peer"
+t=2026-03-09T14:45:03+0530 lvl=eror msg="heartbeat timeout, terminating session" obj=tunnels.session obj=csess id=0acd8ad5f399 clientid=bbdc0972c25796fb77334d256952a74d
+t=2026-03-09T14:45:44+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: i/o timeout"
+t=2026-03-09T14:46:36+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: i/o timeout"
+t=2026-03-09T14:46:59+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp [2600:1f16:d83:1201:5854:db5f:dc55:ef83]:443: i/o timeout"
+t=2026-03-09T14:47:18+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to send authentication request: EOF"
+t=2026-03-09T14:47:55+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to send authentication request: EOF"
+t=2026-03-09T14:48:17+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: i/o timeout"
+t=2026-03-09T14:48:56+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to send authentication request: EOF"
+t=2026-03-09T14:49:50+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: i/o timeout"
+t=2026-03-09T14:52:00+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: i/o timeout"
+t=2026-03-09T14:52:42+0530 lvl=info msg="received stop request" obj=app stopReq="{err:<nil> restart:false}"
+t=2026-03-09T14:52:42+0530 lvl=info msg="session closing" obj=tunnels.session err=nil
+t=2026-03-10T13:13:06+0530 lvl=info msg="no configuration paths supplied"
+t=2026-03-10T13:13:06+0530 lvl=warn msg="ngrok config file found at both XDG and legacy locations, using XDG location" xdg_path=/home/aryan/.config/ngrok/ngrok.yml legacy_path=/home/aryan/.ngrok2/ngrok.yml
+t=2026-03-10T13:13:06+0530 lvl=info msg="using configuration at default config path" path=/home/aryan/.config/ngrok/ngrok.yml
+t=2026-03-10T13:13:06+0530 lvl=info msg="open config file" path=/home/aryan/.config/ngrok/ngrok.yml err=nil
+t=2026-03-10T13:13:06+0530 lvl=info msg="FIPS 140 mode" enabled=false

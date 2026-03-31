@@ -1,0 +1,18 @@
+t=2026-03-28T18:35:37+0530 lvl=info msg="no configuration paths supplied"
+t=2026-03-28T18:35:37+0530 lvl=info msg="using configuration at default config path" path=/home/kali/.config/ngrok/ngrok.yml
+t=2026-03-28T18:35:37+0530 lvl=info msg="open config file" path=/home/kali/.config/ngrok/ngrok.yml err=nil
+t=2026-03-28T18:35:37+0530 lvl=info msg="FIPS 140 mode" enabled=false
+t=2026-03-28T18:35:37+0530 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040 allow_hosts=[]
+t=2026-03-28T18:35:38+0530 lvl=info msg="client session established" obj=tunnels.session
+t=2026-03-28T18:35:38+0530 lvl=info msg="tunnel session started" obj=tunnels.session
+t=2026-03-28T18:35:39+0530 lvl=info msg="started tunnel" obj=tunnels name=command_line addr=http://localhost:5000 url=https://3eef-2401-4900-8818-ba8d-597b-3c6e-95b3-881a.ngrok-free.app
+t=2026-03-28T18:35:42+0530 lvl=warn msg="failed to check for update" obj=updater err="Post \"https://update.ngrok-agent.com/check\": context deadline exceeded"
+t=2026-03-28T18:37:33+0530 lvl=info msg=start pg=/api/tunnels id=6428f90d2171be6d
+t=2026-03-28T18:37:33+0530 lvl=info msg=end pg=/api/tunnels id=6428f90d2171be6d status=200 dur=36.73632ms
+t=2026-03-28T18:38:42+0530 lvl=info msg=start pg=/api/tunnels id=7ad9a3cdbedac90e
+t=2026-03-28T18:38:42+0530 lvl=info msg=end pg=/api/tunnels id=7ad9a3cdbedac90e status=200 dur=179.471µs
+t=2026-03-28T18:38:59+0530 lvl=info msg=start pg=/api/tunnels id=48894b254a5be155
+t=2026-03-28T18:38:59+0530 lvl=info msg=end pg=/api/tunnels id=48894b254a5be155 status=200 dur=2.188287ms
+t=2026-03-28T18:39:22+0530 lvl=info msg="join connections" obj=join id=9776bbb50faa l=[::1]:5000 r=[2401:4900:8818:ba8d:4415:3d7e:ba78:39f7]:63140
+t=2026-03-28T18:39:22+0530 lvl=info msg="join connections" obj=join id=9f789cf3c9b9 l=[::1]:5000 r=[2401:4900:8818:ba8d:4415:3d7e:ba78:39f7]:63140
+t=2026-03-28T18:41:40+0530 lvl=eror msg="session closed, starting reconnect loop" obj=tunnels.session obj=csess id=def74cae2dbd err="read EOF from remote peer"
